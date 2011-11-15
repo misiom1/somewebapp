@@ -16,11 +16,12 @@
 PersonManager pm = (PersonManager) application.getAttribute("personManager");
 Person p = pm.getPerson(Integer.parseInt(request.getParameter("id")));
 Object o = pm.getPerson(Integer.parseInt(request.getParameter("id")));
+p.getName();
 %>
 p: <%=o.toString() %>
         <form action="edytuj.jsp">
-          <input type="text" name="name" value="<%=request.getParameter("name") %>" />
-          <input type="text" name="yob" value="<%=request.getParameter("yob") %>" />
+          <input type="text" name="name" value="<%=p.getName() %>" />
+          <input type="text" name="yob" value="<%=p.getYob() %>" />
           <input type="hidden" value="<%=request.getParameter("id") %>" name="id"/>
           <input type="submit" value=" OK " />
         </form>

@@ -16,8 +16,6 @@
 		scope="session" />
 	<jsp:setProperty property="*" name="person" />
 	
-   ${person.name} ${person.yob}
-
 	<%
 		PersonManager pm = (PersonManager) application.getAttribute("personManager");
 		pm.addPerson(person);

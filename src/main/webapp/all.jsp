@@ -27,11 +27,11 @@
 	%>
 	<table>
 	<c:forEach var="l" items="${lista}">
-	<tr><td>${l.name}</td><td>${l.yob}</td><td><a href="usun.jsp?id=<%=i%>">Usun</a></td><td><a href="edit.jsp?id=<%=i%>&name=${l.name}&yob=${l.yob}">Edytuj</a></td></tr>
+	<tr><td>${l.name}</td><td>${l.yob}</td><td><a href="usun.jsp?id=<%=i%>">Usun</a></td><td><a href="edit.jsp?id=<%=i%>">Edytuj</a></td></tr>
 	<% i++; %>
 		</c:forEach>
 		</table>
-	<a href="add.jsp"> Add new person </a>
+	<a href="start.jsp"> Add new person </a>
 	<a href="all.jsp"> See all persons</a>
 	
 	
